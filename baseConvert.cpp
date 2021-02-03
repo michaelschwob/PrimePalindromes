@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
 
-    int a, b;
+    int a, b, input;
     vector<int> base2; // will be the input number in base 2
 
     cout << "Enter a number that you want to find in base 2: ";
