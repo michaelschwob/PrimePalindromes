@@ -2,6 +2,7 @@
 #include <vector>
 #include <cmath>
 #include <fstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -42,30 +43,26 @@ int main(){
 
             pair = getPair(base2); // converts the backward vector into an integer in base10
 
-            if(prime(pair)){ // if the pair is prime
+            if(prime(pair)){ // if the pair is prime, we found a prime palindrome pair
                 cout << "(" << i << ", " << pair << ") is ";
                 printVec(base2);
                 printVec(backwards);
                 cout << endl;
 
-                file << i << "   ";
-                //printVec2(base2);
+                file <<  i << "   ";
                 for(int i = 0; i < base2.size(); i++){
-                    file << base2[i]; // prints vector contents
+                    file << base2[i];
                 }
                 file << "   " << pair << "   ";
-                //printVec2(backwards);
                 for(int i = 0; i < backwards.size(); i++){
-                    file << backwards[i]; // prints vector contents
+                    file << backwards[i];
                 }
                 file << "   (" << i << ", " << pair << ")   ";
-                //printVec2(base2);
                 for(int i = 0; i < base2.size(); i++){
-                    file << base2[i]; // prints vector contents
+                    file << base2[i];
                 }
-                //printVec2(backwards);
                 for(int i = 0; i < backwards.size(); i++){
-                    file << backwards[i]; // prints vector contents
+                    file << backwards[i];
                 }
 
                 file << endl;
