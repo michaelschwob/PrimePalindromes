@@ -18,4 +18,4 @@ This function obtains all prime palindrome pairs up to a given number.
 
 ## Licensing
 
-This repository is licensed under Git GLPv3.
+This repository is licensed under GNU GPLv3.
