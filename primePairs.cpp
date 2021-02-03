@@ -1,10 +1,12 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <fstream>
 
 using namespace std;
 
-void printVec(vector<int>); // prints the passed vector
+void printVec(vector<int>); // prints the passed vector to console
+void printVec2(vector<int>); // prints the passed vector to a file
 int getPair(vector<int>); // obtains the palindrome pair of the passed base 2 vector
 bool prime(int); // determines if the passed number is a prime number
 
@@ -13,9 +15,15 @@ int main(){
     int a, b, pair, max;
     vector<int> base2; // will be the input number in base 2
     vector<int> backwards; // the base 2 conversion backwards
+    ofstream file; // to write output to a file
 
-    cout << endl << "Enter the maximum number to consider when matching prime palindromes in base 2: ";
+    file.open("output.txt");
+    file << "Prime1   In Base2   Prime2   In Base2   Palindrome Pair   In Base2" << endl;
+
+    cout << "Enter the maximum number to consider when matching prime palindromes in base 2: ";
     cin >> max; // obtains initial input
+
+    cout << endl;
 
     for(int i = 0; i <= max; i++){ // we cycle through every number up to the max
 
@@ -34,13 +42,45 @@ int main(){
 
             pair = getPair(base2); // converts the backward vector into an integer in base10
 
-            cout << "(" << i << ", " << pair << ") is ";
-            printVec(base2);
-            printVec(backwards);
-            cout << endl;
+            if(prime(pair)){ // if the pair is prime
+                cout << "(" << i << ", " << pair << ") is ";
+                printVec(base2);
+                printVec(backwards);
+                cout << endl;
+
+                file << i << "   ";
+                //printVec2(base2);
+                for(int i = 0; i < base2.size(); i++){
+                    file << base2[i]; // prints vector contents
+                }
+                file << "   " << pair << "   ";
+                //printVec2(backwards);
+                for(int i = 0; i < backwards.size(); i++){
+                    file << backwards[i]; // prints vector contents
+                }
+                file << "   (" << i << ", " << pair << ")   ";
+                //printVec2(base2);
+                for(int i = 0; i < base2.size(); i++){
+                    file << base2[i]; // prints vector contents
+                }
+                //printVec2(backwards);
+                for(int i = 0; i < backwards.size(); i++){
+                    file << backwards[i]; // prints vector contents
+                }
+
+                file << endl;
+
+            }
+            
         }
 
     }
+
+    cout << endl << endl;
+
+    file.close();
+
+    system("pause");
 
     return 0;
 }
@@ -48,6 +88,13 @@ int main(){
 void printVec(vector<int> vec){
     for(int i = 0; i < vec.size(); i++){
         cout << vec[i]; // prints vector contents
+    }
+}
+
+void printVec2(vector<int> vec){
+    ofstream file;
+    for(int i = 0; i < vec.size(); i++){
+        file << vec[i]; // prints vector contents
     }
 }
 
