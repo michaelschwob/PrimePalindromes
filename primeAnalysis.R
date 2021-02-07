@@ -8,10 +8,10 @@
 ###
 
 # load dataset
-output <- read.csv("~/Desktop/Palindromes/output.txt") # adjust this to wherever file is located
+output <- read.csv("~/Desktop/Palindromes/output.txt")
 
 # set N
-N = 100000 # adjust this as N increases in the output file
+N = 500000
 
 # obtain unique values of primes featured in output
 primeOutput = unique(output$Prime1)
@@ -63,10 +63,10 @@ percentage
 ###  Let's Obtain a Nice Graphic
 ###
 
-percVec = c(rep(0,length(1000:100000))) # adjust this as N increases in the output file
 counter = 0
 
-sequence = seq(1000,100000,100) # relatively decent resolution
+sequence = seq(1000,N,1000) # relatively decent resolution
+percVec = c(rep(0,length(sequence)))
 
 for(maxSize in sequence){
   
@@ -86,7 +86,7 @@ for(maxSize in sequence){
   
   counter = counter + 1
   percVec[i] = sum(counts)/length(counts)
-  cat("  ", (max(sequence)-maxSize)/100)
+  cat("  ", (max(sequence)-maxSize)/1000)
   
 }
 
