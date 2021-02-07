@@ -16,6 +16,14 @@ This function finds the palindrome pair for the given number in base 2.
 
 This function obtains all prime palindrome pairs up to a given number.
 
+#### pp.cpp
+
+Obtains a list of prime numbers such that it's mirror in any base between 2 and 10 is also a prime number.
+
+#### primeAnalysis.R
+
+Using the output from pp.cpp, this file graphs the percentage of prime numbers that have a prime mirror in some base 2-10 against the upperbound of numbers to consider.
+
 ## Licensing
 
 This repository is licensed under GNU GPLv3.
