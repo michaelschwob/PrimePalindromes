@@ -8,10 +8,10 @@
 ###
 
 # load dataset
-output <- read.csv("~/Desktop/Palindromes/output.txt")
+output <- read.csv("~/Desktop/Palindromes/output.txt") # adjust this to wherever file is located
 
 # set N
-N = 100000
+N = 100000 # adjust this as N increases in the output file
 
 # obtain unique values of primes featured in output
 primeOutput = unique(output$Prime1)
@@ -63,7 +63,7 @@ percentage
 ###  Let's Obtain a Nice Graphic
 ###
 
-percVec = c(rep(0,length(1000:100000)))
+percVec = c(rep(0,length(1000:100000))) # adjust this as N increases in the output file
 counter = 0
 
 sequence = seq(1000,100000,100) # relatively decent resolution
@@ -89,3 +89,8 @@ for(maxSize in sequence){
   cat("  ", (max(sequence)-maxSize)/100)
   
 }
+
+percentages = percVec[percVec>0]
+
+options(scipen=999)
+plot(sequence, percentages, type="l", xlab="Up to N", ylab="Primes with Mirrors (%)", main="Primes with Mirrors Across Different Intervals")
