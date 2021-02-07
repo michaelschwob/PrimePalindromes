@@ -22,7 +22,7 @@ int main(){
     file.open("output.txt");
     file << "Base,Prime1,Prime2,Palindrome" << endl;
 
-    cout << "Enter the maximum number to consider when matching prime palindromes in base 2: ";
+    cout << "Enter the maximum number to consider when matching prime palindromes: ";
     cin >> max; // obtains initial input
 
     cout << endl;
