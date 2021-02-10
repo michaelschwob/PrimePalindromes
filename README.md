@@ -24,6 +24,14 @@ Obtains a list of prime numbers such that it's mirror in any base between 2 and 
 
 Using the output from pp.cpp, this file graphs the percentage of prime numbers that have a prime mirror in some base 2-10 against the upperbound of numbers to consider.
 
+#### xn.cpp (coming soon)
+
+Outputs the primes that require an additional base to obtain a prime mirror to form a palindrome
+
+#### xnAnalysis.R (coming soon)
+
+Outputs the primes that require an additional base to obtain a prime mirror to form a palindrome
+
 ## Licensing
 
 This repository is licensed under GNU GPLv3.
