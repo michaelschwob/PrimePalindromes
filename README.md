@@ -1,6 +1,6 @@
 # PrimePalindromes
 
-This repository will contain several functions that find, use, or manipulate prime palindromes in base 2 (and maybe other bases...) given different parameters.
+This repository contains several functions that find, use, or manipulate prime palindromes in various bases.
 
 ## Description of Each File
 
