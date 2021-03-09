@@ -1,6 +1,6 @@
 # PrimePalindromes
 
-This repository contains several functions that find, use, or manipulate prime palindromes in various bases.
+This repository contains several functions that find, use, or manipulate prime palindromes in various bases. As I progressed through this topic, I started with the most basic file (baseConvert.cpp converts a given number into base 2), then worked through more difficult problems. All files, no matter how trivial or nuanced, are shared in this repository.
 
 Algorithms in this repository were used to obtain results in:
 
@@ -22,7 +22,7 @@ This file obtains all prime palindrome pairs up to a given number.
 
 #### pp.cpp
 
-This file obtains a list of prime numbers such that it's mirror in any base between 2 and 10 is also a prime number. Its output can be analyzed in xnAnalysis.R.
+This file obtains a list of prime numbers such that its mirror in any base between 2 and 10 is also a prime number. Its output can be analyzed in xnAnalysis.R.
 
 #### primeAnalysis.R
 
@@ -30,7 +30,7 @@ Using the output from pp.cpp, this file graphs the percentage of prime numbers t
 
 #### xn.cpp
 
-Outputs the primes that require an additional base to obtain a prime mirror in base 10. The generated sequence in base 10 is the Smaug sequence.
+This file outputs the primes that require an additional base to obtain a prime mirror in base 10. The generated sequence in base 10 is the Smaug sequence.
 
 #### xnAnalysis.R
 
