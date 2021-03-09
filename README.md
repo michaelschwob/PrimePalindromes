@@ -6,19 +6,19 @@ This repository contains several functions that find, use, or manipulate prime p
 
 #### baseConvert.cpp 
 
-This function converts the given number into base 2.
+This file converts the given number into base 2.
 
 #### findPair.cpp
 
-This function finds the palindrome pair for the given number in base 2.
+This file finds the palindrome pair for the given number in base 2.
 
 #### primePairs.cpp
 
-This function obtains all prime palindrome pairs up to a given number.
+This file obtains all prime palindrome pairs up to a given number.
 
 #### pp.cpp
 
-Obtains a list of prime numbers such that it's mirror in any base between 2 and 10 is also a prime number.
+This file obtains a list of prime numbers such that it's mirror in any base between 2 and 10 is also a prime number. Its output can be analyzed in xnAnalysis.R.
 
 #### primeAnalysis.R
 
@@ -30,7 +30,7 @@ Outputs the primes that require an additional base to obtain a prime mirror in b
 
 #### xnAnalysis.R
 
-Outputs the primes that require an additional base to obtain a prime mirror in base 10. The generated sequence in base 10 is the Smaug sequence. Note that the output from pp.cpp is required.
+Using the output from pp.cpp, this file outputs the primes that require an additional base to obtain a prime mirror in base 10. The generated sequence in base 10 is the Smaug sequence.
 
 ## Licensing
 
