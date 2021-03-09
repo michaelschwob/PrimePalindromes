@@ -3,7 +3,7 @@
 ###  Calculates the Smaug sequence using C++ output
 ###
 
-output <- read.csv("C:/Users/micha/Desktop/Palindromes/output.txt")
+output <- read.csv(".../output.txt") # change your directory responsibly
 
 N = 10000
 
