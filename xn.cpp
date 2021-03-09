@@ -7,21 +7,18 @@
 using namespace std;
 
 void printVec(vector<int>); // prints the passed vector to console
-int getPair(vector<int>); // obtains the palindrome pair of the passed base 2 vector
 bool prime(int); // determines if the passed number is a prime number
 void convertToBase(int n, int base, vector<int>&, vector<int>&); // converts a number to a base
 int convert_decimal(vector<int> vec, int base); // to convert to decimal
 
 int main(){
 
-    // our objective is to print the list of numbers that require the next base to find a prime mirror to form a palindrome
-
     int max; // the largest number that we will consider
-    int X = 2; // will hold which base we are going up to
-    int pair; // will be the mirror
-    vector<int> listN; // will store the N required to use the next base to find palindrome prime
+    int X = 2; // will store the maximum base that we are searching through
+    int pair; // will store the pair (or, mirror)
+    vector<int> listN; // will store the Smaug sequence (the primes that require to use of additional bases to find a palindrome prime)
     vector<int> base; // will be the input number in the current base
-    vector<int> backwards; // the base 2 conversion backwards
+    vector<int> backwards; // will be the converted number backwards
     bool flag = false; // our boolean flag
 
     cout << endl << "Enter the largest number that we will consider (N): ";
@@ -36,8 +33,8 @@ int main(){
 
             for(int currentBase=2; currentBase <= X; currentBase++){ // we go through each base
 
-                base.clear(); // clear vector
-                backwards.clear(); // clear vector
+                base.clear();
+                backwards.clear();
 
                 convertToBase(n, currentBase, base, backwards); // converts n to base
                 pair = convert_decimal(backwards, currentBase); // converts the backward vector into an integer in base10
@@ -58,13 +55,13 @@ int main(){
 
                     X++; // we increase the base by one
 
-                    base.clear(); // clear vector
-                    backwards.clear(); // clear vector
+                    base.clear();
+                    backwards.clear();
 
                     convertToBase(n, X, base, backwards); // converts n to base
                     pair = convert_decimal(backwards, X); // converts the backward vector into an integer in base10
 
-                    if(prime(pair)){ // if the mirror is prime
+                    if(prime(pair)){
 
                         flag = true;
 
@@ -82,7 +79,8 @@ int main(){
     }
 
     cout << "The integers that require an increase in base range are: " << endl;
-    printVec(listN); // print the sequence
+
+    printVec(listN);
 
     cout << endl;
 
@@ -91,21 +89,22 @@ int main(){
 
 void printVec(vector<int> vec){
     for(int i = 0; i < vec.size(); i++){
-        cout << vec[i] << " "; // prints vector contents
+        cout << vec[i] << " ";
     }
 }
 
-int getPair(vector<int> baseVec){
-
-    int pair = 0;
+bool prime(int n){
+     
+    if (n <= 1){ // edge case
+        return false;
+    }
     
-    for(int i = 0; i < baseVec.size(); i++){
-        if(baseVec[i] == 1){
-            pair = pair + pow(2,i);
+    for (int i = 2; i < n; i++){
+        if (n % i == 0){
+            return false;
         }
     }
-
-    return pair;
+    return true; 
 }
 
 int convert_decimal(vector<int> vec, int base){
@@ -130,20 +129,6 @@ int convert_decimal(vector<int> vec, int base){
 
 }
 
-bool prime(int n){
-     
-    if (n <= 1){ // edge case
-        return false;
-    }
-    
-    for (int i = 2; i < n; i++){ // check from 2 to n-1 
-        if (n % i == 0){
-            return false;
-        }
-    }
-    return true; 
-}
-
 void convertToBase(int n, int base, vector<int>& baseVec, vector<int>& backwardsVec){
 
     int b;
@@ -154,9 +139,5 @@ void convertToBase(int n, int base, vector<int>& baseVec, vector<int>& backwards
             baseVec.insert(baseVec.begin(), b); // adds b to beginning of vector
             backwardsVec.push_back(b);
     }
-    //cout << "Converted: ";
-    //printVec(baseVec);
-    //cout << "   Backwards: ";
-    //printVec(backwards);
 
 }
