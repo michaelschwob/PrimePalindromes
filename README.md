@@ -1,6 +1,6 @@
 # PrimePalindromes
 
-This repository contains several functions that find, use, or manipulate prime palindromes in various bases. As I progressed through this topic, I started with the most basic file (baseConvert.cpp converts a given number into base 2), then worked through more difficult problems. All files, no matter how trivial or nuanced, are shared in this repository.
+This repository contains several functions that find, use, or manipulate prime palindromes in various bases. As I progressed through this topic, I started with the most basic code (baseConvert.cpp converts a given number into base 2), then worked through more difficult problems. All files, no matter how trivial or nuanced, are shared in this repository.
 
 Algorithms in this repository were used to obtain results in:
 
