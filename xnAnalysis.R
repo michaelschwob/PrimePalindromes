@@ -5,7 +5,7 @@
 
 output <- read.csv(".../output.txt") # change your directory responsibly
 
-N = 10000
+N = 10000 # match N with the passed parameter from pp.cpp
 
 primeOutput = unique(output$Prime1)
 
