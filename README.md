@@ -2,9 +2,9 @@
 
 This repository contains several functions that find, use, or manipulate prime palindromes in various bases.
 
-Algorithms in this repository were used to obtain results in 
+Algorithms in this repository were used to obtain results in:
 
-Venkat R., Schwob M.R., (2021). "Novel Sequences of Prime Palindromes in Various Bases." International Journal of Advanced Research in Computer Science, vol. 12:2. (To appear).
+Venkat R., Schwob M.R., (2021). "Novel Sequences of Prime Palindromes in Various Bases." _International Journal of Advanced Research in Computer Science_, vol. 12:2. (To appear).
 
 ## Description of Each File
 
