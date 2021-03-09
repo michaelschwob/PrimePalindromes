@@ -22,16 +22,16 @@ int main(){
     file << "Prime1   In Base2   Prime2   In Base2   Palindrome Pair   In Base2" << endl;
 
     cout << "Enter the maximum number to consider when matching prime palindromes in base 2: ";
-    cin >> max; // obtains initial input
+    cin >> max;
 
     cout << endl;
 
     for(int i = 0; i <= max; i++){ // we cycle through every number up to the max
 
-        if(prime(i)){ // if we are at a prime number...
+        if(prime(i)){
 
-            a = i; // initialize a
-            base2.clear(); // clear vector
+            a = i;
+            base2.clear();
             backwards.clear();
 
             while(a != 0){
@@ -84,14 +84,14 @@ int main(){
 
 void printVec(vector<int> vec){
     for(int i = 0; i < vec.size(); i++){
-        cout << vec[i]; // prints vector contents
+        cout << vec[i];
     }
 }
 
 void printVec2(vector<int> vec){
     ofstream file;
     for(int i = 0; i < vec.size(); i++){
-        file << vec[i]; // prints vector contents
+        file << vec[i];
     }
 }
 
@@ -114,7 +114,7 @@ bool prime(int n){
         return false;
     }
     
-    for (int i = 2; i < n; i++){ // check from 2 to n-1 
+    for (int i = 2; i < n; i++){
         if (n % i == 0){
             return false;
         }
