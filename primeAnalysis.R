@@ -8,7 +8,7 @@
 ###
 
 # load dataset
-output <- read.csv("~/Desktop/Palindromes/output.txt")
+output <- read.csv("~/Desktop/Palindromes/output.txt") # change directories responsibly
 
 # set N
 N = 500000
@@ -44,7 +44,6 @@ primes = prime_numbers(N)
 ###  Obtain List of Prime Numbers that Have a Mirror in Some Base (2,...,10)
 ###
 
-#primeOutput = primeOutput[1:160]
 
 counts = rep(FALSE, length(primes))
 
