@@ -30,7 +30,7 @@ Outputs the primes that require an additional base to obtain a prime mirror in b
 
 #### xnAnalysis.R
 
-Outputs the primes that require an additional base to obtain a prime mirror in base 10. The generated sequence in base 10 is the Smaug sequence.
+Outputs the primes that require an additional base to obtain a prime mirror in base 10. The generated sequence in base 10 is the Smaug sequence. Note that the output from pp.cpp is required.
 
 ## Licensing
 
