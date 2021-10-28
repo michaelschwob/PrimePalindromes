@@ -4,7 +4,7 @@ This repository contains several functions that find, use, or manipulate prime p
 
 Algorithms in this repository were used to obtain results in:
 
-Venkat R., Schwob M.R., (2021). "Novel Sequences of Prime Palindromes in Various Bases." _International Journal of Advanced Research in Computer Science_, vol. 12:2. (To appear).
+Venkat R., Schwob M.R., (2021). "Novel Sequences of Prime Palindromes in Various Bases." _International Journal of Advanced Research in Computer Science_, vol. 12:2.
 
 ## Description of Each File
 
